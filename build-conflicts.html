@@ -1,0 +1,1227 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build and Test Conflicts in The Wild</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body style="font-family:verdana;">
+    <header>
+      <div class="top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <p>Build and Test Conflicts in The Wild</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+            <ul class="nav navbar-nav main-navbar-nav">
+                <li class="active"><a href="main.html" title="">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conflicts <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+                        <li><a href="test-conflicts.html" title="">Test Conflicts</a></li>
+                    </ul>
+                </li>
+                <li><a href="sample.html" title="">Sample</a></li>
+            </ul>                           
+        </div>        
+      </div>
+    </nav>
+    </header>
+    <div class="bread_area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <ol class="breadcrumb">
+                      <li><a href="main.html">Home</a></li>
+                      <li class="active">Build Conflicts</li>
+                  </ol>                    
+              </div>
+          </div>
+      </div>
+    </div>
+    <main class="site-main page-main">
+        <div class="container">
+            <div class="row">
+                <section class="page col-sm-9">
+                  <h3>Build Conflict Cases</h3>
+                    <table class="build_conflicts">
+                      <thead>
+                        <tr>
+                          <th> Project Name </th>
+                          <th> Build Conflict Type </th>
+                          <th> Broken Build ID </th>
+                          <th> Parent Build One </th>
+                          <th> Parent Build Two </th>
+                          <th> Clean MS </th>
+                          <th> Motivator </th>
+                        </tr>
+                      </thded>
+                      <tbody>
+                          <tr>
+                            <td> CorfuDB/CorfuDB </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/184169929" target="_blank" > 184169929 </a> </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/182952082" target="_blank" > 182952082 </a> </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/184053786" target="_blank" > 184053786 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> CorfuDB/CorfuDB </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/147270257" target="_blank" > 147270257 </a> </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/146731270" target="_blank" > 146731270 </a> </td>
+                            <td> <a href="https://travis-ci.org/CorfuDB/CorfuDB/builds/147268879" target="_blank" > 147268879 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/167353985" target="_blank" > 167353985 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/167337851" target="_blank" > 167337851 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/167031283" target="_blank" > 167031283 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "unimplementedMethod" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/158194754" target="_blank" > 158194754 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/157904090" target="_blank" > 157904090 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/157651571" target="_blank" > 157651571 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/108796563" target="_blank" > 108796563 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/108795960" target="_blank" > 108795960 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/108776026" target="_blank" > 108776026 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/75952745" target="_blank" > 75952745 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/75948732" target="_blank" > 75948732 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/75923848" target="_blank" > 75923848 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/52708270" target="_blank" > 52708270 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/52624715" target="_blank" > 52624715 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/52621434" target="_blank" > 52621434 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> CloudSlang/cloud-slang </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/48623977" target="_blank" > 48623977 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/48452656" target="_blank" > 48452656 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudSlang/cloud-slang/builds/47642475" target="_blank" > 47642475 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> jparsec/jparsec </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jparsec/builds/298321301" target="_blank" > 298321301 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jparsec/builds/298321674" target="_blank" > 298321674 </a> </td>
+                            <td> <a href="https://travis-ci.org/jparsec/jparsec/builds/44292456" target="_blank" > 44292456 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> spotify/netty-zmtp </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/spotify/netty-zmtp/builds/64970950" target="_blank" > 64970950 </a> </td>
+                            <td> <a href="https://travis-ci.org/spotify/netty-zmtp/builds/49887268" target="_blank" > 49887268 </a> </td>
+                            <td> <a href="https://travis-ci.org/spotify/netty-zmtp/builds/64969308" target="_blank" > 64969308 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> damnhandy/Handy-URI-Templates </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Handy-URI-Templates/builds/294178999" target="_blank" > 294178999 </a> </td>
+                            <td> <a href="https://travis-ci.org/damnhandy/Handy-URI-Templates/builds/3279767" target="_blank" > 3279767 </a> </td>
+                            <td> <a href="https://travis-ci.org/damnhandy/Handy-URI-Templates/builds/8985944" target="_blank" > 8985944 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> graphaware/neo4j-reco </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-reco/builds/291082366" target="_blank" > 291082366 </a> </td>
+                            <td> <a href="https://travis-ci.org/graphaware/neo4j-reco/builds/67313466" target="_blank" > 67313466 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-reco/builds/291082952" target="_blank" > 291082952 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> square/javapoet </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/square/javapoet/builds/48276050" target="_blank" > 48276050 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/javapoet/builds/48264414" target="_blank" > 48264414 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/javapoet/builds/48249131" target="_blank" > 48249131 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> javaparser/javaparser </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/javaparser/builds/266734913" target="_blank" > 266734913 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/javaparser/builds/266735395" target="_blank" > 266735395 </a> </td>
+                            <td> <a href="https://travis-ci.org/javaparser/javaparser/builds/232077865" target="_blank" > 232077865 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> graphaware/neo4j-framework </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/300000699" target="_blank" > 300000699 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/300001083" target="_blank" > 300001083 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/300001574" target="_blank" > 300001574 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> graphaware/neo4j-framework </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/299999324" target="_blank" > 299999324 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/299999578" target="_blank" > 299999578 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-framework/builds/300000232" target="_blank" > 300000232 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> hdiv/hdiv </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/hdiv/hdiv/builds/126140680" target="_blank" > 126140680 </a> </td>
+                            <td> <a href="https://travis-ci.org/hdiv/hdiv/builds/126121157" target="_blank" > 126121157 </a> </td>
+                            <td> <a href="https://travis-ci.org/hdiv/hdiv/builds/126010037" target="_blank" > 126010037 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> CloudifySource/cloudify </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/CloudifySource/cloudify/builds/14913281" target="_blank" > 14913281 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudifySource/cloudify/builds/14912159" target="_blank" > 14912159 </a> </td>
+                            <td> <a href="https://travis-ci.org/CloudifySource/cloudify/builds/14913175" target="_blank" > 14913175 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/261011849" target="_blank" > 261011849 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/176606678" target="_blank" > 176606678 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/176914535" target="_blank" > 176914535 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/261011849" target="_blank" > 261011849 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/176606678" target="_blank" > 176606678 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/176914535" target="_blank" > 176914535 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/243316175" target="_blank" > 243316175 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/178982350" target="_blank" > 178982350 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/178982403" target="_blank" > 178982403 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/243309781" target="_blank" > 243309781 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/214119107" target="_blank" > 214119107 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/214497429" target="_blank" > 214497429 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/242509582" target="_blank" > 242509582 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/214851840" target="_blank" > 214851840 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/215034489" target="_blank" > 215034489 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-databind </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/jackson-databind/builds/231752920" target="_blank" > 231752920 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/216921134" target="_blank" > 216921134 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-databind/builds/216949214" target="_blank" > 216949214 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> searchbox-io/Jest </th>
+                            <td> "incompatibleTypes" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666842" target="_blank" > 266666842 </a> </td>
+                            <td> <a href="https://travis-ci.org/searchbox-io/Jest/builds/7348623" target="_blank" > 7348623 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266667301" target="_blank" > 266667301 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> searchbox-io/Jest </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666842" target="_blank" > 266666842 </a> </td>
+                            <td> <a href="https://travis-ci.org/searchbox-io/Jest/builds/7348623" target="_blank" > 7348623 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266667301" target="_blank" > 266667301 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> searchbox-io/Jest </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266665859" target="_blank" > 266665859 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666132" target="_blank" > 266666132 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666455" target="_blank" > 266666455 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> searchbox-io/Jest </th>
+                            <td> "unimplementedMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266665859" target="_blank" > 266665859 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666132" target="_blank" > 266666132 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/Jest/builds/266666455" target="_blank" > 266666455 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> FasterXML/jackson-core </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-core/builds/49277833" target="_blank" > 49277833 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-core/builds/49277342" target="_blank" > 49277342 </a> </td>
+                            <td> <a href="https://travis-ci.org/FasterXML/jackson-core/builds/49277694" target="_blank" > 49277694 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> tinkerpop/blueprints </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/blueprints/builds/267838950" target="_blank" > 267838950 </a> </td>
+                            <td> <a href="https://travis-ci.org/tinkerpop/blueprints/builds/7251425" target="_blank" > 7251425 </a> </td>
+                            <td> <a href="https://travis-ci.org/tinkerpop/blueprints/builds/7275268" target="_blank" > 7275268 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> tinkerpop/blueprints </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/blueprints/builds/267833702" target="_blank" > 267833702 </a> </td>
+                            <td> <a href="https://travis-ci.org/tinkerpop/blueprints/builds/10006381" target="_blank" > 10006381 </a> </td>
+                            <td> <a href="https://travis-ci.org/tinkerpop/blueprints/builds/10033212" target="_blank" > 10033212 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> tananaev/traccar </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/traccar/builds/248845938" target="_blank" > 248845938 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/traccar/builds/248846728" target="_blank" > 248846728 </a> </td>
+                            <td> <a href="https://travis-ci.org/tananaev/traccar/builds/127767037" target="_blank" > 127767037 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> tananaev/traccar </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/traccar/builds/232042524" target="_blank" > 232042524 </a> </td>
+                            <td> <a href="https://travis-ci.org/tananaev/traccar/builds/93468836" target="_blank" > 93468836 </a> </td>
+                            <td> <a href="https://travis-ci.org/tananaev/traccar/builds/93456576" target="_blank" > 93456576 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> tananaev/traccar </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/traccar/builds/232041300" target="_blank" > 232041300 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/traccar/builds/232041477" target="_blank" > 232041477 </a> </td>
+                            <td> <a href="https://travis-ci.org/tananaev/traccar/builds/145785480" target="_blank" > 145785480 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> DSpace/DSpace </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/DSpace/builds/263379307" target="_blank" > 263379307 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/18006409" target="_blank" > 18006409 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/17867814" target="_blank" > 17867814 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> DSpace/DSpace </th>
+                            <td> "incompatibleTypes" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/DSpace/builds/263379307" target="_blank" > 263379307 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/18006409" target="_blank" > 18006409 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/17867814" target="_blank" > 17867814 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> DSpace/DSpace </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/DSpace/builds/263379307" target="_blank" > 263379307 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/18006409" target="_blank" > 18006409 </a> </td>
+                            <td> <a href="https://travis-ci.org/DSpace/DSpace/builds/17867814" target="_blank" > 17867814 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> yegor256/s3auth </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/s3auth/builds/294115389" target="_blank" > 294115389 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/s3auth/builds/294116142" target="_blank" > 294116142 </a> </td>
+                            <td> <a href="https://travis-ci.org/yegor256/s3auth/builds/27476470" target="_blank" > 27476470 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> pac4j/pac4j </th>
+                            <td> "unimplementedMethodSuperType" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291027337" target="_blank" > 291027337 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291028699" target="_blank" > 291028699 </a> </td>
+                            <td> <a href="https://travis-ci.org/pac4j/pac4j/builds/111151558" target="_blank" > 111151558 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> pac4j/pac4j </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291027337" target="_blank" > 291027337 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291028699" target="_blank" > 291028699 </a> </td>
+                            <td> <a href="https://travis-ci.org/pac4j/pac4j/builds/111151558" target="_blank" > 111151558 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> pac4j/pac4j </th>
+                            <td> "unimplementedMethodSuperType" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291006785" target="_blank" > 291006785 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291007948" target="_blank" > 291007948 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291008489" target="_blank" > 291008489 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> pac4j/pac4j </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291006785" target="_blank" > 291006785 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291007948" target="_blank" > 291007948 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291008489" target="_blank" > 291008489 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> pac4j/pac4j </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291001187" target="_blank" > 291001187 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/pac4j/builds/291001416" target="_blank" > 291001416 </a> </td>
+                            <td> <a href="https://travis-ci.org/pac4j/pac4j/builds/81744123" target="_blank" > 81744123 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> tumblr/jumblr </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/15597349" target="_blank" > 15597349 </a> </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/15448857" target="_blank" > 15448857 </a> </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/13923231" target="_blank" > 13923231 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> tumblr/jumblr </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/15597349" target="_blank" > 15597349 </a> </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/15448857" target="_blank" > 15448857 </a> </td>
+                            <td> <a href="https://travis-ci.org/tumblr/jumblr/builds/13923231" target="_blank" > 13923231 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> OpenGrok/OpenGrok </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/OpenGrok/builds/260884854" target="_blank" > 260884854 </a> </td>
+                            <td> <a href="https://travis-ci.org/OpenGrok/OpenGrok/builds/34401647" target="_blank" > 34401647 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/OpenGrok/builds/260885658" target="_blank" > 260885658 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> perwendel/spark </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/spark/builds/229805514" target="_blank" > 229805514 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/spark/builds/229805715" target="_blank" > 229805715 </a> </td>
+                            <td> <a href="https://travis-ci.org/perwendel/spark/builds/181120662" target="_blank" > 181120662 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> NLPchina/elasticsearch-sql </th>
+                            <td> "incompatibleTypes" </td>
+                            <td> <a href="https://travis-ci.org/NLPchina/elasticsearch-sql/builds/99402562" target="_blank" > 99402562 </a> </td>
+                            <td> <a href="https://travis-ci.org/NLPchina/elasticsearch-sql/builds/99401600" target="_blank" > 99401600 </a> </td>
+                            <td> <a href="https://travis-ci.org/NLPchina/elasticsearch-sql/builds/98781128" target="_blank" > 98781128 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> NLPchina/elasticsearch-sql </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/260447690" target="_blank" > 260447690 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/260448041" target="_blank" > 260448041 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/260448503" target="_blank" > 260448503 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> NLPchina/elasticsearch-sql </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/238652770" target="_blank" > 238652770 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/238653883" target="_blank" > 238653883 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/elasticsearch-sql/builds/238654712" target="_blank" > 238654712 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> vavr-io/vavr </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/vavr/builds/279623010" target="_blank" > 279623010 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/vavr/builds/279623946" target="_blank" > 279623946 </a> </td>
+                            <td> <a href="https://travis-ci.org/vavr-io/vavr/builds/73460929" target="_blank" > 73460929 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> square/wire </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/square/wire/builds/157352214" target="_blank" > 157352214 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/wire/builds/151088900" target="_blank" > 151088900 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/wire/builds/149644087" target="_blank" > 149644087 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> l0rdn1kk0n/wicket-bootstrap </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/33711220" target="_blank" > 33711220 </a> </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/32203441" target="_blank" > 32203441 </a> </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/33700856" target="_blank" > 33700856 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> l0rdn1kk0n/wicket-bootstrap </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/11775898" target="_blank" > 11775898 </a> </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/11766897" target="_blank" > 11766897 </a> </td>
+                            <td> <a href="https://travis-ci.org/l0rdn1kk0n/wicket-bootstrap/builds/11753209" target="_blank" > 11753209 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> square/okio </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/square/okio/builds/53590047" target="_blank" > 53590047 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/okio/builds/53512697" target="_blank" > 53512697 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/okio/builds/51230329" target="_blank" > 51230329 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/120089896" target="_blank" > 120089896 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/119843675" target="_blank" > 119843675 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/119841177" target="_blank" > 119841177 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/68942596" target="_blank" > 68942596 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/68893274" target="_blank" > 68893274 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/68518956" target="_blank" > 68518956 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/32894479" target="_blank" > 32894479 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/32644663" target="_blank" > 32644663 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/32870444" target="_blank" > 32870444 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/28099524" target="_blank" > 28099524 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/25635609" target="_blank" > 25635609 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/27786127" target="_blank" > 27786127 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/26703313" target="_blank" > 26703313 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/26604028" target="_blank" > 26604028 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/26689825" target="_blank" > 26689825 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/25098248" target="_blank" > 25098248 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/24127367" target="_blank" > 24127367 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/24926864" target="_blank" > 24926864 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> querydsl/querydsl </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/querydsl/builds/245246051" target="_blank" > 245246051 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/43024946" target="_blank" > 43024946 </a> </td>
+                            <td> <a href="https://travis-ci.org/querydsl/querydsl/builds/44344574" target="_blank" > 44344574 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> oxo42/stateless4j </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/stateless4j/builds/291334455" target="_blank" > 291334455 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/stateless4j/builds/291335307" target="_blank" > 291335307 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/stateless4j/builds/291335657" target="_blank" > 291335657 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> sanity/quickml </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/53571613" target="_blank" > 53571613 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/53552160" target="_blank" > 53552160 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/53495563" target="_blank" > 53495563 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> sanity/quickml </th>
+                            <td> "unimplementedMethod" </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/53078374" target="_blank" > 53078374 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/51295424" target="_blank" > 51295424 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/52786842" target="_blank" > 52786842 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> sanity/quickml </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25549352" target="_blank" > 25549352 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25544853" target="_blank" > 25544853 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25548698" target="_blank" > 25548698 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> sanity/quickml </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25549352" target="_blank" > 25549352 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25544853" target="_blank" > 25544853 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/25548698" target="_blank" > 25548698 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> sanity/quickml </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/quickml/builds/261094547" target="_blank" > 261094547 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/32365230" target="_blank" > 32365230 </a> </td>
+                            <td> <a href="https://travis-ci.org/sanity/quickml/builds/32339061" target="_blank" > 32339061 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> google/truth </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/google/truth/builds/25020324" target="_blank" > 25020324 </a> </td>
+                            <td> <a href="https://travis-ci.org/google/truth/builds/25016734" target="_blank" > 25016734 </a> </td>
+                            <td> <a href="https://travis-ci.org/google/truth/builds/25016452" target="_blank" > 25016452 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> timmolter/XChange </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/265366487" target="_blank" > 265366487 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/265367118" target="_blank" > 265367118 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/265367674" target="_blank" > 265367674 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> timmolter/XChange </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/232202095" target="_blank" > 232202095 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/232202606" target="_blank" > 232202606 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/XChange/builds/232202943" target="_blank" > 232202943 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/144600040" target="_blank" > 144600040 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/144584703" target="_blank" > 144584703 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/144580240" target="_blank" > 144580240 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/129572210" target="_blank" > 129572210 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/128966369" target="_blank" > 128966369 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/129571864" target="_blank" > 129571864 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "unimplementedMethod" </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/100402057" target="_blank" > 100402057 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/100359289" target="_blank" > 100359289 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/100316921" target="_blank" > 100316921 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/70541417" target="_blank" > 70541417 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/69694110" target="_blank" > 69694110 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/70541409" target="_blank" > 70541409 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/264197134" target="_blank" > 264197134 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66828290" target="_blank" > 66828290 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/67548498" target="_blank" > 67548498 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/262590772" target="_blank" > 262590772 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66828086" target="_blank" > 66828086 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/67551312" target="_blank" > 67551312 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/262588978" target="_blank" > 262588978 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/94195206" target="_blank" > 94195206 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/93340876" target="_blank" > 93340876 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/262588129" target="_blank" > 262588129 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/94448188" target="_blank" > 94448188 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/95393602" target="_blank" > 95393602 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261827428" target="_blank" > 261827428 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66039328" target="_blank" > 66039328 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66375528" target="_blank" > 66375528 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261826973" target="_blank" > 261826973 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66851336" target="_blank" > 66851336 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/67551575" target="_blank" > 67551575 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261826640" target="_blank" > 261826640 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/68517283" target="_blank" > 68517283 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/68544192" target="_blank" > 68544192 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261825993" target="_blank" > 261825993 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/91450994" target="_blank" > 91450994 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/91448081" target="_blank" > 91448081 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261824238" target="_blank" > 261824238 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/95643827" target="_blank" > 95643827 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/95849340" target="_blank" > 95849340 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261076398" target="_blank" > 261076398 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/61156227" target="_blank" > 61156227 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/61168500" target="_blank" > 61168500 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261075895" target="_blank" > 261075895 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/61504578" target="_blank" > 61504578 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/61743199" target="_blank" > 61743199 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261075340" target="_blank" > 261075340 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66038248" target="_blank" > 66038248 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/66380170" target="_blank" > 66380170 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261073520" target="_blank" > 261073520 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/68544200" target="_blank" > 68544200 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/68546467" target="_blank" > 68546467 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261072842" target="_blank" > 261072842 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/80879915" target="_blank" > 80879915 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/80895179" target="_blank" > 80895179 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261072181" target="_blank" > 261072181 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/90114055" target="_blank" > 90114055 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/90354703" target="_blank" > 90354703 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "projectRules" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261069264" target="_blank" > 261069264 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/95528461" target="_blank" > 95528461 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/95854619" target="_blank" > 95854619 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> datastax/java-driver </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/java-driver/builds/261062583" target="_blank" > 261062583 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/201229321" target="_blank" > 201229321 </a> </td>
+                            <td> <a href="https://travis-ci.org/datastax/java-driver/builds/202731595" target="_blank" > 202731595 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> dianping/cat </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/cat/builds/262523939" target="_blank" > 262523939 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/cat/builds/262524153" target="_blank" > 262524153 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/cat/builds/262524583" target="_blank" > 262524583 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> protostuff/protostuff </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/protostuff/builds/262560987" target="_blank" > 262560987 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/protostuff/builds/262561921" target="_blank" > 262561921 </a> </td>
+                            <td> <a href="https://travis-ci.org/protostuff/protostuff/builds/54938495" target="_blank" > 54938495 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> code4craft/webmagic </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/258998355" target="_blank" > 258998355 </a> </td>
+                            <td> <a href="https://travis-ci.org/code4craft/webmagic/builds/128642244" target="_blank" > 128642244 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/258998698" target="_blank" > 258998698 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> code4craft/webmagic </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/243501513" target="_blank" > 243501513 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/243501975" target="_blank" > 243501975 </a> </td>
+                            <td> <a href="https://travis-ci.org/code4craft/webmagic/builds/11121696" target="_blank" > 11121696 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> code4craft/webmagic </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/237768118" target="_blank" > 237768118 </a> </td>
+                            <td> <a href="https://travis-ci.org/code4craft/webmagic/builds/216587617" target="_blank" > 216587617 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/webmagic/builds/237243090" target="_blank" > 237243090 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> square/okhttp </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/square/okhttp/builds/19399475" target="_blank" > 19399475 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/okhttp/builds/19399433" target="_blank" > 19399433 </a> </td>
+                            <td> <a href="https://travis-ci.org/square/okhttp/builds/19398501" target="_blank" > 19398501 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> graphaware/neo4j-timetree </th>
+                            <td> "incompatibleTypes" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/neo4j-timetree/builds/298701803" target="_blank" > 298701803 </a> </td>
+                            <td> <a href="https://travis-ci.org/graphaware/neo4j-timetree/builds/31937574" target="_blank" > 31937574 </a> </td>
+                            <td> <a href="https://travis-ci.org/graphaware/neo4j-timetree/builds/31697048" target="_blank" > 31697048 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/113479426" target="_blank" > 113479426 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/111166422" target="_blank" > 111166422 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/112943276" target="_blank" > 112943276 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unimplementedMethodSuperType" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/113479426" target="_blank" > 113479426 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/111166422" target="_blank" > 111166422 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/112943276" target="_blank" > 112943276 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/109369904" target="_blank" > 109369904 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/101107434" target="_blank" > 101107434 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/107247494" target="_blank" > 107247494 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/103065874" target="_blank" > 103065874 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/93966682" target="_blank" > 93966682 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/103064869" target="_blank" > 103064869 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/101107160" target="_blank" > 101107160 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/90696395" target="_blank" > 90696395 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/100866210" target="_blank" > 100866210 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/101107160" target="_blank" > 101107160 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/90696395" target="_blank" > 90696395 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/100866210" target="_blank" > 100866210 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/90071710" target="_blank" > 90071710 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/89465997" target="_blank" > 89465997 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/89465245" target="_blank" > 89465245 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/81066148" target="_blank" > 81066148 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/80620738" target="_blank" > 80620738 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/80621067" target="_blank" > 80621067 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/81066148" target="_blank" > 81066148 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/80620738" target="_blank" > 80620738 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/80621067" target="_blank" > 80621067 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "incompatibleMethodSignature" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/54693559" target="_blank" > 54693559 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/51374440" target="_blank" > 51374440 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/54604897" target="_blank" > 54604897 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/54693559" target="_blank" > 54693559 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/51374440" target="_blank" > 51374440 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/54604897" target="_blank" > 54604897 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unimplementedMethodSuperType" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/50878615" target="_blank" > 50878615 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/50833440" target="_blank" > 50833440 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/43860836" target="_blank" > 43860836 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/50878615" target="_blank" > 50878615 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/50833440" target="_blank" > 50833440 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/43860836" target="_blank" > 43860836 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/41598073" target="_blank" > 41598073 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/39266122" target="_blank" > 39266122 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/41344362" target="_blank" > 41344362 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "duplicatedDeclaration" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/41367169" target="_blank" > 41367169 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/41347143" target="_blank" > 41347143 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/41344362" target="_blank" > 41344362 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolMethod" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/30971217" target="_blank" > 30971217 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/26749094" target="_blank" > 26749094 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/30728790" target="_blank" > 30728790 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> ontop/ontop </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/26120796" target="_blank" > 26120796 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/26119005" target="_blank" > 26119005 </a> </td>
+                            <td> <a href="https://travis-ci.org/ontop/ontop/builds/25772946" target="_blank" > 25772946 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> Adobe-Consulting-Services/acs-aem-commons </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292436253" target="_blank" > 292436253 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292436909" target="_blank" > 292436909 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292437960" target="_blank" > 292437960 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> Adobe-Consulting-Services/acs-aem-commons </th>
+                            <td> "unavailableSymbolFileSpecialCase" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292419256" target="_blank" > 292419256 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292425982" target="_blank" > 292425982 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/acs-aem-commons/builds/292421561" target="_blank" > 292421561 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> swagger-api/swagger-core </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65300089" target="_blank" > 65300089 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65086520" target="_blank" > 65086520 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65298512" target="_blank" > 65298512 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> swagger-api/swagger-core </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65291397" target="_blank" > 65291397 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/64436476" target="_blank" > 64436476 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65265579" target="_blank" > 65265579 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> swagger-api/swagger-core </th>
+                            <td> "unavailableSymbolVariable" </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65086450" target="_blank" > 65086450 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/64955895" target="_blank" > 64955895 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/65083676" target="_blank" > 65083676 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> swagger-api/swagger-core </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/swagger-core/builds/232521477" target="_blank" > 232521477 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/swagger-core/builds/230247465" target="_blank" > 230247465 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/155041327" target="_blank" > 155041327 </a> </td>
+                            <td> true </td>
+                            <td> contributor </td>
+                          </tr>
+                          <tr>
+                            <td> swagger-api/swagger-core </th>
+                            <td> "malformedProgram" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/swagger-core/builds/232516725" target="_blank" > 232516725 </a> </td>
+                            <td> <a href="https://travis-ci.org/swagger-api/swagger-core/builds/185372812" target="_blank" > 185372812 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/swagger-core/builds/230242288" target="_blank" > 230242288 </a> </td>
+                            <td> false </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> scribejava/scribejava </th>
+                            <td> "unimplementedMethod" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/scribejava/builds/230252127" target="_blank" > 230252127 </a> </td>
+                            <td> <a href="https://travis-ci.org/scribejava/scribejava/builds/181964599" target="_blank" > 181964599 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/scribejava/builds/230253435" target="_blank" > 230253435 </a> </td>
+                            <td> true </td>
+                            <td> integrator </td>
+                          </tr>
+                          <tr>
+                            <td> b3log/solo </th>
+                            <td> "unavailableSymbolFile" </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/solo/builds/260314193" target="_blank" > 260314193 </a> </td>
+                            <td> <a href="https://travis-ci.org/leusonmario/solo/builds/260315206" target="_blank" > 260315206 </a> </td>
+                            <td> <a href="https://travis-ci.org/b3log/solo/builds/134652682" target="_blank" > 134652682 </a> </td>
+                            <td> false </td>
+                            <td> contributor </td>
+                          </tr>
+                      </tbody>
+                     </table>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+            
+        </div>
+        </div>
+      <div id="copyright">
+            <div class="container">
+                <div class="cen">
+                    <div class="col-md-8">
+                        <ul class="list-inline navbar-right">
+                            <li><a href="main.html">HOME</a></li>
+                            <li><a href="http://twiki.cin.ufpe.br/twiki/bin/view/SPG/WebHome">SPG Group</a></li>
+                            <li><a href="http://cin.ufpe.br/~lmps2">Personal Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build and Test Conflicts in The Wild</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        $(function(){
+            $("#includedContent").load("content.html");
+        });
+    </script>
+  </head>
+  <body style="font-family:verdana;">
+    <header>
+      <div class="top">
+		  <div class="container">
+		      <div class="row">
+		          <div class="col-sm-6">
+		              <p>Build and Test Conflicts in The Wild</p>
+		          </div>
+		      </div>
+		  </div>
+		</div>
+		<nav class="navbar navbar-default">
+			<div class="container">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+		    	<ul class="nav navbar-nav main-navbar-nav">
+		        	<li class="active"><a href="main.html" title="">HOME</a></li>
+		        	<li class="dropdown">
+		            	<a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conflicts <span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		                	<li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+		                	<li><a href="test-conflicts.html" title="">Test Conflicts</a></li>
+		            	</ul>
+		        	</li>
+		        	<li><a href="sample.html" title="">Sample</a></li>
+		    	</ul>                           
+			</div>        
+			</div>
+		</nav>
+    </header>
+    <div class="bread_area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                                    
+              </div>
+          </div>
+      </div>
+    </div>
+    <main class="site-main page-main">
+        <div class="container">
+            <div class="row">
+                <section class="page col-sm-9">
+                  <h2>Build and Test Conflicts in The Wild</h2>
+                  <div class="abstract">
+                    <h4>Abstract:</h4>
+                    <p> <b>Context:</b> Collaborative software development allows developers to simultaneously contribute to the same project performing different activities. Although this might increase development productivity, it also brings conflicts among developers contributions. Conflicts can arise indifferent moments. For instance, during merge scenarios when different contributions are integrated (merge conflicts), as also after the integration, when the attempt to build the integration result fails due to compilation problems or failed tests (build and test conflicts, respectively). <b>Goal:</b> To understand how different contributions from merge scenarios influence on build and test conflicts occurrence, in this study we investigate the frequency, causes and adopted resolution patterns for these conflicts. <b>Methodology: </b>We perform an empirical study evaluating merge scenarios from Java projects using Travis CI for continuous integration and Maven as build manager. To identify conflicts, we access information from git repositories as also their associated build process. Filters were applied to establish merge commits that present broken build status, while their parent commits have superior ones (for example, a merge commit is not compilable while its parents are successful built). Besides parsing build logs for identifying the causes behind the broken builds, we also parse the source code to stablish the interferences between contributions. Different from previous studies, we evaluate the occurrence of conflicts from merge scenarios with merge conflicts leading us to classify our results based on contributor and integrator changes. <b>Results:</b> We identify most build and test conflicts happen due to contributor changes (especially in clean merge scenarios, without merge conflicts). In the other hand, integrator changes performed after contributions integration are also responsible for conflicts. Build conflicts are not restricted to compilation problems but also to static analysis (for example, verification of style conventions performed after the compilation process). The most recurrent causes concentrate on static semantic problems, especially Unavailable Symbol (the attempt to use an unavailable element in the project). In the same way, test conflicts involve not only failed tests but also failed analysis performed after tests execution (unachieved code coverage). In general, the applied resolution patterns adopt the conflicts to the new project state instead of returning to an old one. <b>Conclusion:</b> Our findings reinforce the evidence of build and test conflicts and also present information about the occurrence of conflicts considering scenarios from merge conflicts. This perspective leads us to evaluate how the way merge conflict fixes influence on build and test conflicts. For build conflicts, we define a catalog of causes that can be applied to assistive tools on software development aiming to avoid or treat such problems. For test conflicts, our scripts can support developers work during the trial to understand the test case fail since we filter the parent’s contributions informing only those involved in the test fail.
+                  </div>
+
+                  <div class="study">
+                    <h4>Replication Study</h4>
+                    <p>During this work, we design a study involving three main steps as illustrated bellow. The first step is responsible for getting all information required for the study, which includes mining repositories (source code and builds information). The second step performs many verifications aiming to filter our data of false positive conflicts leaving only true ones. Finally, the last step identifies the causes of build and test conflicts and the resolution patterns adopted (identifying for each conflict the closest commit responsible for the fix). </p>
+                  </div>
+                  <div class="container">
+                  	<figure>
+                    	<img src="img/study-setup.png" alt="Study Design" width="400" height="300" title="Study Design">
+                    	<figcaption>Figure 1 - Study Desing.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="study">
+                    <h4>Data, Scripts and Tools</h4>
+                    <ul>
+                      <li><a href="https://github.com/leusonmario/TravisAnalysis/" title="" target="_blank" >Minning Scripts</a></li>
+                      <li><a href="sample.html" title="">Sample Dataset</a></li>
+                    </ul>
+                  </div>
+                  <div class="study">
+                    <h4>Evaluation Results</h4>
+                    <ul>
+                      <li><a href="build-conflicts.html" title="">Build Conflicts</a></li>
+                      <li><a href="test-conflicts.html" title="">Test Connflicts</a></li>
+                    </ul>
+                  </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="cen">
+            <div class="col-md-12">
+                <h4>Support and Funding</h4>
+                <ul class="list-inline">
+                    <!-- <li><a href="http://www.capes.gov.br/" class="navbar-brand"><img src="img/capes.png" alt="Post"></a></li> -->
+                    <li>
+	                  	<a href="http://capes.gov.br" target="_blank">
+	                    	<img src="img/capes.png" alt="Capes" width="100" height="50" title="Capes">
+	                    </a>
+                    </li>
+                    <li>
+	                    <a href="http://cin.ufpe.br" target="_blank">
+	                    	<img src="img/cin-ufpe.png" alt="CIn" width="80" height="50" title="Informatics Center">
+	                    </a>
+                    </li>
+                    <li>
+                    	<a href="http://www.ines.org.br/" title="" target="_blank">
+                    		<img src="img/ines.jpeg" alt="INES" width="60" height="50" title="National Institute of Science and Technology for Software Engineering">
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="http://twiki.cin.ufpe.br/twiki/bin/view/SPG/WebHome" title="" target="_blank">
+                    		<img src="img/spg.jpg" alt="SPG" width="60" height="50" title="Software Productivity Group">
+                    	</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div id="copyright">
+            <div class="container">
+                <div class="cen">
+                    <div class="col-md-8">
+                        <ul class="list-inline navbar-right">
+                            <li><a href="main.html">HOME</a></li>
+                            <li><a href="http://twiki.cin.ufpe.br/twiki/bin/view/SPG/WebHome" target="_blank">SPG Group</a></li>
+                            <li><a href="http://cin.ufpe.br/~lmps2" target="_blank">Personal Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+  </html>
